@@ -1,0 +1,480 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #4d6376;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 15px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.logo-img {
+    width: 50px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #004080;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0056b3;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content li a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #004080;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Main Welcome Section */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.main-content h3 {
+    font-size: 38px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.main-content h4 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff3333;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Nosotros Section */
+#nosotros {
+    padding: 50px;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 6%; /* Ajusta este valor para mover la sección más abajo */
+}
+
+.nosotros-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nosotros-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.nosotros-text h4 {
+    color: #ff4d4d;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.nosotros-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.nosotros-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.atencion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.atencion-item {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.nosotros-image {
+    max-width: 400px;
+}
+
+.nosotros-image img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nosotros-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Testimonios Section */
+#testimonios {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.testimonios-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonios-slider {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.testimonio {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    transition: opacity 0.5s ease;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.testimonio-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.testimonio-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.testimonio-info div h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.testimonio-info div p {
+    margin: 0;
+    color: #888;
+}
+
+/* Form Styles (if needed in other pages) */
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: auto;
+    margin-top: 6px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #004080;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.alert-success {
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.alert {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.alert.success {
+    background-color: #4CAF50;
+}
+
+#messages {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .main-content h3 {
+        font-size: 24px;
+    }
+
+    .main-content h4 {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+
+    .nosotros-container {
+        flex-direction: column;
+    }
+
+    .testimonio {
+        width: 100%;
+    }
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+/* Estilos básicos para el dashboard */
+
+header {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0077b6;
+    color: white;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+}
+
+.user-options img {
+    width: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.perfil-menu {
+    position: relative;
+}
+
+.perfil-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.perfil-menu:hover .perfil-dropdown {
+    display: block;
+}
+
+.dashboard-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.dashboard-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.dashboard-item img {
+    width: 80px;
+    height: 80px;
+}
+
+.dashboard-item p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo para mostrar "Citas Canceladas" al pasar el ratón */
+.citas-hover .citas-canceladas {
+    display: none;
+    position: absolute;
+    top: 100px; /* Ajusta según el diseño */
+}
+
+.citas-hover:hover .citas-canceladas {
+    display: block;
+}
+
+

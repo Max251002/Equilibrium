@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Equilibrium</h1>
+            <img src="{% static 'logo.png' %}" alt="Logo" class="logo-img">
+        </div>
+        <nav>
+            <div class="btn-group">
+
+            <div class="dropdown show">
+                <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownRegistro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: none;margin: 2px;font-size: large;font-family: sans-serif;border: none;">
+                  Registrarse
+                </a>
+              
+                <div class="dropdown-menu" aria-labelledby="dropdownRegistro">
+                  <a class="dropdown-item" href="{% url 'registrarse_alumno' %}">Alumno</a>
+                  <a class="dropdown-item" href="{% url 'registrarse_psicologo' %}">Psicólogo</a>
+                </div>
+              </div>
+
+              <div class="dropdown show">
+                <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownInicio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: none;margin: 2px;font-size: large;font-family: sans-serif;border: none;">
+                  Iniciar Sesion
+                </a>
+              
+                <div class="dropdown-menu" aria-labelledby="dropdownInicio">
+                  <a class="dropdown-item" href="{% url 'login_alumno' %}">Alumno</a>
+                  <a class="dropdown-item" href="{% url 'login_psicologo' %}">Psicólogo</a>
+                </div>
+              </div>
+              <a href="#nosotros" class="btn btn-primary btn-lg active" role="button" style="background: none;margin: 2px;border: 1px solid transparent;font-size: large;font-family: sans-serif;">Nosotros</a>
+               
+        </div>
+
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <section class="main-content">
+        <h3>Bienvenido a este hermoso proyecto.</h3>
+        <h4>El apoyo que necesitas para mejorar tu vida</h4>
+        <p>"Explorando la mente: Estrategias psicológicas para el bienestar y el crecimiento personal en la era moderna."</p>
+        <a class="cta-button" href="{% url 'login_alumno' %}">Agenda tu cita</a>
+    </section>
+
+    <!-- Sección de Nosotros -->
+    <section id="nosotros">
+        <div class="nosotros-container">
+            <div class="nosotros-text">
+                <h4>Sobre Nosotros</h4>
+                <h2>Atención Psicológica</h2>
+                <p>Somos un equipo de psicólogas y psicólogos que atienden 24/7 para fortalecer los derechos y la vida de las personas.</p>
+                <p>¿Alguien de tu familia, empresa, comunidad o tú mismo enfrentan situaciones de ansiedad, pérdida, depresión, violencia, conflictos de pareja, abusos sexuales, procesos de duelo y/o secuelas de secuestro, desaparición forzada?</p>
+                <p>Brindamos atención psicológica a:</p>
+                <div class="atencion-grid">
+                    <div class="atencion-item">Niños</div>
+                    <div class="atencion-item">Adolescentes</div>
+                    <div class="atencion-item">Adultos</div>
+                    <div class="atencion-item">Parejas</div>
+                </div>
+                <a class="cta-button" href="">Agenda tu cita</a>
+            </div>
+            <div class="nosotros-image">
+                <img src="{% static 'psicologo.jpg' %}" alt="Atención Psicológica">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section id="testimonios">
+        <div class="testimonios-container">
+            <h2>Lo que dicen nuestros pacientes</h2>
+            <div class="testimonios-slider">
+                <!-- Testimonios 1 -->
+                <div class="testimonio" id="testimonio-1">
+                    <div class="card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Estaba atravesando un momento difícil en mi vida y sentía que no podía superarlo por mi cuenta. Gracias al apoyo y la orientación del equipo de psicólogos, he logrado entender mis emociones y tomar el control de mi vida nuevamente. ¡Estoy eternamente agradecida!"</p>
+                        <div class="testimonio-info">
+                            <div>
+                                <h4>Kevin Rangel</h4>
+                                <p>Actor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Después de años de luchar con la ansiedad, finalmente decidí buscar ayuda profesional. Desde mi primera sesión, me sentí escuchado y comprendido. Las estrategias y herramientas que aprendí con mi terapeuta han hecho una gran diferencia en mi día a día."</p>
+                        <div class="testimonio-info">
+                            <div>
+                                <h4>Vanessa Ochoa</h4>
+                                <p>Estudiante Universitario</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonios 2 -->
+                <div class="testimonio" id="testimonio-2">
+                    <div class="card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Gracias a la terapia he podido superar mis miedos y ahora me siento más seguro de mí mismo. Los psicólogos son profesionales altamente capacitados."</p>
+                        <div class="testimonio-info">
+                            <div>
+                                <h4>Mario Pérez</h4>
+                                <p>Ingeniero</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="stars">★★★★★</div>
+                        <p>"La terapia ha sido un antes y un después en mi vida. Pude trabajar en mis emociones y ahora manejo mis problemas de manera más saludable."</p>
+                        <div class="testimonio-info">
+                            <div>
+                                <h4>Ana González</h4>
+                                <p>Doctora</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript para rotar testimonios -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    <script>
+        let currentTestimonio = 1;
+        function rotateTestimonios() {
+            const totalTestimonios = 2;
+            document.getElementById(`testimonio-${currentTestimonio}`).style.opacity = 0;
+            currentTestimonio = currentTestimonio === totalTestimonios ? 1 : currentTestimonio + 1;
+            document.getElementById(`testimonio-${currentTestimonio}`).style.opacity = 1;
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            setInterval(rotateTestimonios, 60000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* Estilos básicos para el dashboard */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+header {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0077b6;
+    color: white;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+}
+
+.user-options img {
+    width: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.perfil-menu {
+    position: relative;
+}
+
+.perfil-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.perfil-menu:hover .perfil-dropdown {
+    display: block;
+}
+
+.dashboard-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.dashboard-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.dashboard-item img {
+    width: 80px;
+    height: 80px;
+}
+
+.dashboard-item p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo para que "Citas Canceladas" aparezca al pasar el mouse */
+.citas-hover .citas-canceladas {
+    display: none; /* Oculta "Citas Canceladas" por defecto */
+    position: absolute;
+    top: 100px; /* Ajusta según el diseño */
+    left: 50%; /* Centra el menú emergente */
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.citas-hover:hover .citas-canceladas {
+    display: block; /* Muestra cuando el ratón está sobre el contenedor de "Citas" */
+}

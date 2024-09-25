@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión Psicólogo</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Equilibrium</h1>
+            <a href="{% url 'index' %}"><img src="{% static 'logo.png' %}" alt="Logo" class="logo-img"></a>
+        </div>
+        <nav>
+        </nav>
+    </header>
+    <div class="form-container">
+        <h2>Iniciar Sesión Psicólogo</h2>
+        <!--
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}-->
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Entrar</button>
+        </form>
+        <p><a href="{% url 'password_reset' %}">¿Olvidaste tu contraseña?</a></p>
+        <p>¿Aún no tienes cuenta? Registrate <a href="{% url 'registrarse_alumno' %}">aquí</a></p>
+
+
+    </div>
+</body>
+</html>
